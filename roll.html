@@ -7,29 +7,39 @@
 $(function(){$(window).scroll(function () {
 var yaxis = $(this).scrollTop();
 
+var oneheight=document.getElementById("pageone").offsetHeight;
+var twoheight=document.getElementById("pagetwo").offsetHeight;
+
+
 $("div.yaxis").text(yaxis);
-if(yaxis>10&&yaxis<1000)/*{$("#block").text("nextpagenextpagenextpagenextpagenextpagenextpagenextpage");};*/
- {var scroll_offset = $ ("#second").offset ();   
+
+
+if(yaxis>10&&yaxis<(oneheight/2))
+ {var scroll_offset = $ ("#pagetwo").offset ();   
   $("body,html").animate({scrollTop:scroll_offset.top}, 0);}
-else if(yaxis>1000&&yaxis<1448)
-{var scroll_offset = $ ("#first").offset ();   
-  $("body,html").animate({scrollTop:scroll_offset.top}, 0);}
-else if(yaxis>1448&&yaxis<1800)
- {var scroll_offset = $ ("#third").offset ();   
-  $("body,html").animate({scrollTop:scroll_offset.top}, 0);}
-else if(yaxis>1800&&yaxis<3068)
- {var scroll_offset = $ ("#second").offset ();   
+else if(yaxis>(oneheight/2)&&yaxis<oneheight)
+{var scroll_offset = $ ("#pageone").offset ();   
   $("body,html").animate({scrollTop:scroll_offset.top}, 0);}
 
+else if(yaxis>(oneheight+10)&&yaxis<(oneheight+(twoheight/2)))
+ {var scroll_offset = $ ("#pagethree").offset ();   
+  $("body,html").animate({scrollTop:scroll_offset.top}, 0);}
+
+ 
+else if(yaxis>(oneheight+twoheight/2)&&yaxis<(oneheight+twoheight))
+ {var scroll_offset = $ ("#pagetwo").offset ();   
+  $("body,html").animate({scrollTop:scroll_offset.top}, 0);}
 
 });});
 
 </script>
 </head>
 <body>
-<div id="block">
+<div id="pageone">
 <div id="first"></div>
-<div class="yaxis">0</div>
+<div class="yaxis" id="one">0</div>
+
+
 力國木了師合口那國
 樣報是分到。種國一無走態年向其要能司製感更，動刻樂死學海！腦之要下全，力理體行。間的密食手：平想先市當天當後古陸麗相成寫，財而地直題房子帶們統坐客來投進年保持喜調一實別雙腦生生形……那不。
 
@@ -230,8 +240,11 @@ else if(yaxis>1800&&yaxis<3068)
 以商來、命車我成看住出，它利食張日發們帶回果總。這起面夫管以預爸狀十；義有發年體亞的苦法之為著度重為。
 
 議館是當
+</div>
+<div id="pagetwo">
 <div id="second"></div>
-<div class="yaxis">0</div>
+<div class="yaxis" id= "two">0</div>
+
 ypesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
@@ -313,9 +326,10 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 
 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words,
-
+</div>
+<div id="pagethree">
 <div id="third"></div>
-<div class="yaxis">0</div>
+<div class="yaxis" id="three">0</div>
 Հայտնի է, որ ընթերցողը, կարդալով հասկանալի տեքստ, չի կարողանա կենտրոնանալ տեքստի ձևավորման վրա: Lorem Ipsum օգտագործելը բացատրվում է նրանով, որ այն բաշխում է բառերը քիչ թե շատ իրականի նման, ի տարբերություն «Բովանդակություն, բովանդակություն» սովորական կրկննության, ինչը ընթերցողի համար հասկանալի է: Շատ համակարգչային տպագրական ծրագրեր և ինտերնետային էջերի խմբագրիչներ այն օգտագործում են որպես իրենց ստանդարտ տեքստային մոդել, և հետևապես, ինտերնետում Lorem Ipsum-ի որոնման արդյունքում կարելի է հայտնաբերել էջեր, որոնք դեռ նոագրական արդյունաբերության ստանդարտ մոդելային տեքստ, ինչը մի անհայտ տպագրիչի կողմից տարբեր տառատեսակների օրինակների գիրք ստեղծելու ջանքերի արդյունք է: Այս տեքստը ոչ միայն կարողացել է գոյատևել հինգ դարաշրջան, այլև ներառվել է էլեկտրոնային տպագրության մեջ` մնալով էապես անփոփոխ: Այն հայտնի է դարձել 1960-ականներին Lorem Ipsum բովանդակող Letraset էջերի թողարկման արդյունքում, իսկ ավելի ուշ համակարգչային տպագրության այնպիսի ծրագրերի թողարկման հետևանքով, ինչպիսին է Aldus PageMaker-ը, որը ներառում է Lorem Ipsum-ի տարատեսակներ:
 
 Հայտնի է, որ ընթերցողը, կարդալով հասկանալի տեքստ, չի կարողանա կենտրոնանալ տեքստի ձևավորման վրա: Lorem Ipsum օգտագործելը բացատրվում է նրանով, որ այն բաշխում է բառերը քիչ թե շատ իրականի նման, ի տարբերություն «Բովանդակություն, բովանդակություն» սովորական կրկննության, ինչը ընթերցողի համար հասկանալի է: Շատ համակարգչային տպագրական ծրագրեր և ինտերնետային էջերի խմբագրիչներ այն օգտագործում են որպես իրենց ստանդարտ տեքստային մոդել, և հետևապես, ինտերնետում Lorem Ipsum-ի որոնման արդյունքում կարելի է հայտնաբերել էջեր, որոնք դեռ նոագրական արդյունաբերության ստանդարտ մոդելային տեքստ, ինչը մի անհայտ տպագրիչի կողմից տարբեր տառատեսակների օրինակների գիրք ստեղծելու ջանքերի արդյունք է: Այս տեքստը ոչ միայն կարողացել է գոյատևել հինգ դարաշրջան, այլև ներառվել է էլեկտրոնային տպագրության մեջ` մնալով էապես անփոփոխ: Այն հայտնի է դարձել 1960-ականներին Lorem Ipsum բովանդակող Letraset էջերի թողարկման արդյունքում, իսկ ավելի ուշ համակարգչային տպագրության այնպիսի ծրագրերի թողարկման հետևանքով, ինչպիսին է Aldus PageMaker-ը, որը ներառում է Lorem Ipsum-ի տարատեսակներ:
@@ -327,12 +341,7 @@ There are many variations of passages of Lorem Ipsum available, but the majority
 Հայտնի է, որ ընթերցողը, կարդալով հասկանալի տեքստ, չի կարողանա կենտրոնանալ տեքստի ձևավորման վրա: Lorem Ipsum օգտագործելը բացատրվում է նրանով, որ այն բաշխում է բառերը քիչ թե շատ իրականի նման, ի տարբերություն «Բովանդակություն, բովանդակություն» սովորական կրկննության, ինչը ընթերցողի համար հասկանալի է: Շատ համակարգչային տպագրական ծրագրեր և ինտերնետային էջերի խմբագրիչներ այն օգտագործում են որպես իրենց ստանդարտ տեքստային մոդել, և հետևապես, ինտերնետում Lorem Ipsum-ի որոնման արդյունքում կարելի է հայտնաբերել էջեր, որոնք դեռ նոագրական արդյունաբերության ստանդարտ մոդելային տեքստ, ինչը մի անհայտ տպագրիչի կողմից տարբեր տառատեսակների օրինակների գիրք ստեղծելու ջանքերի արդյունք է: Այս տեքստը ոչ միայն կարողացել է գոյատևել հինգ դարաշրջան, այլև ներառվել է էլեկտրոնային տպագրության մեջ` մնալով էապես անփոփոխ: Այն հայտնի է դարձել 1960-ականներին Lorem Ipsum բովանդակող 
 Հայտնի է, որ ընթերցողը, կարդալով հասկանալի տեքստ, չի կարողանա կենտրոնանալ տեքստի ձևավորման վրա: Lorem Ipsum օգտագործելը բացատրվում է նրանով, որ այն բաշխում է բառերը քիչ թե շատ իրականի նման, ի տարբերություն «Բովանդակություն, բովանդակություն» սովորական կրկննության, ինչը ընթերցողի համար հասկանալի է: Շատ համակարգչային տպագրական ծրագրեր և ինտերնետային էջերի խմբագրիչներ այն օգտագործում են որպես իրենց ստանդարտ տեքստային մոդել, և հետևապես, ինտերնետում Lorem Ipsum-ի որոնման արդյունքում կարելի է հայտնաբերել էջեր, որոնք դեռ նոագրական արդյունաբերության ստանդարտ մոդելային տեքստ, ինչը մի անհայտ տպագրիչի կողմից տարբեր տառատեսակների օրինակների գիրք ստեղծելու ջանքերի արդյունք է: Այս տեքստը ոչ միայն կարողացել է գոյատևել հինգ դարաշրջան, այլև ներառվել է էլեկտրոնային տպագրության մեջ` մնալով էապես անփոփոխ: Այն հայտնի է դարձել 1960-ականներին Lorem Ipsum բովանդակող 
 <div class="yaxis">0</div>
-
 </div>
-
-
-
-
 </body>
 
 </html>
